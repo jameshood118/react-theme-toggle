@@ -8,6 +8,7 @@ const App = () => {
     return (
     <Container>
         <Title>eNotaryLog Test</Title>
+        <Button primary>Toggle Theme</Button>
         <Button>Toggle Theme</Button>
     </Container>
     )
