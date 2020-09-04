@@ -1,6 +1,5 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { Wrapper} from './styled'
 
 const StyledButton = styled.button`
 border: none;
@@ -18,7 +17,9 @@ background: black
 `
 
 const Button = ({primary, margin, children})=> {
-return (<Wrapper><StyledButton margin={margin} primary={primary}>{children}</StyledButton></Wrapper>);
+return (
+    <StyledButton margin={margin} primary={primary}>{children}</StyledButton>
+    );
 }
 
 export default Button;
