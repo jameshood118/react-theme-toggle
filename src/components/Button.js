@@ -15,15 +15,11 @@ color: white;
 background: black
 `}
 `
-const SuperButton = styled(StyledButton)`
-font-size: 2.5rem;
-`
 
 const Button = ({primary, children})=> {
 return (
 <Wrapper>
     <StyledButton primary={primary}>{children}</StyledButton>
-    <SuperButton>{children}</SuperButton>
 </Wrapper>
     );
 }
