@@ -1,25 +1,27 @@
 import React from 'react'
-import styled, { css } from 'styled-components'
+import {func, string} from 'prop-types'
+import styled from 'styled-components'
 
 const StyledButton = styled.button`
+background: ${({theme})=> theme.buttonBackgroundColor};
 border: none;
 padding: 0.5rem 1rem;
 margin: ${({margin})=> margin || '2rem'};
 text-transform: uppercase;
-color: black;
+color: ${({theme})=> theme.buttonTextColor};
 cursor: pointer;
 outline:none;
-
-${({primary}) => primary && css`
-color: white;
-background: black
-`}
 `
 
-const Button = ({primary, margin, children})=> {
+const Button = ({theme, toggleTheme, children})=> {
 return (
-    <StyledButton margin={margin} primary={primary}>{children}</StyledButton>
+    <StyledButton onClick={toggleTheme}>{children}</StyledButton>
     );
+}
+
+Button.propTypes = {
+    theme: string.isRequired,
+    toggleTheme: func.isRequired
 }
 
 export default Button;
