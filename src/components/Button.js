@@ -1,5 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { Wrapper} from './styled'
 
 const StyledButton = styled.button`
 border: none;
@@ -20,10 +21,10 @@ font-size: 2.5rem;
 
 const Button = ({primary, children})=> {
 return (
-    <>
-<StyledButton primary={primary}>{children}</StyledButton>
-<SuperButton>{children}</SuperButton>
-</>
+<Wrapper>
+    <StyledButton primary={primary}>{children}</StyledButton>
+    <SuperButton>{children}</SuperButton>
+</Wrapper>
     );
 }
 
