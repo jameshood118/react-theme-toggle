@@ -5,7 +5,7 @@ const StyledButton = styled.button`
 border: none;
 padding: 0.5rem 1rem;
 text-transform: uppercase;
-color: ${props =>(props.primary ? 'black': '#fff')};
+color: ${({primary}) =>(primary ? 'black': '#fff')};
 cursor: pointer;
 outline:none;
 `
